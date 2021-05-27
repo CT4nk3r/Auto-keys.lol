@@ -6,7 +6,7 @@ import random
 
 pages = 0
 print("Loaded Auto keys.lol ethereum CMD VERSION 1.4")
-threadCount = input('How many threads to run: ')
+# threadCount = input('How many threads to run: ')
 print("Started search...")
 
 
@@ -39,7 +39,7 @@ def run():
         run()
 
 
-#for i in range(int(threadCount)):
-    #thread = threading.Thread(target=run)
-    #thread.start()
+# for i in range(int(threadCount)):
+#     thread = threading.Thread(target=run)
+#     thread.start()
 run()
