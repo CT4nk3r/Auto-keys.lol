@@ -11,7 +11,7 @@ print("Started search...")
 
 def run():
     try:
-        while 5 > 1:
+        while True:
             #webUrl = urllib.request.urlopen('https://keys.lol/ethereum/1')
             pageNum = random.randrange(1,904625697166532776746648320380374280100293470930272690489102837043110636675)
             fullurl = 'https://keys.lol/bitcoin/'+str(pageNum)
@@ -23,7 +23,7 @@ def run():
             data = webUrl.html.html
             result = re.findall("[+-]?\d+\.\d+", str(data))
             for i in result:
-                if str(i) + " btc" in str(data):
+                if str(i) + " tx" in str(data):
                     if float(i) > 0:
                         with open('ValidWalletsBTC.txt', 'a') as appendFile:
                             appendFile.write('{} btc\n'.format(str(i)))
